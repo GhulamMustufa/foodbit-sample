@@ -99,6 +99,8 @@ export default function EditStore() {
   };
 
   const deleteStore = () => {
+    //api call will be made through axios or fetch to delete the store and then the page will be refreshed
+    //will need to pass id of store to delete it
     setFormValues({
       storeName: "",
       about: "",
@@ -109,6 +111,7 @@ export default function EditStore() {
   };
 
   const saveStore = () => {
+    //validaton will be done, if validated successfully, then data will be sent to api call
     for (var key in formValues) {
       if (formValues[key] === "") {
         return;
